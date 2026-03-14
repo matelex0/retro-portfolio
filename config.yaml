@@ -1,0 +1,70 @@
+# Config made for a disabled Developer to customize his/her portfolio.
+
+profile:
+  name: "XIANT.DEV"
+  role: "Creative Developer."
+  subtitle: "Turning complex ideas into clean code."
+  status: "Available for new projects"
+  location: "Italy / Sicily"
+  bio: "Student from Italy, studying.<br>Coding in free time. Focused on minimal, functional design and scalable code.<br>Always eager to learn new technologies and improve my skills."
+
+mail:
+  address: "xiantdev@gmail.com"
+
+colors:
+  accent: "#d651ffc4"
+  bg_color: "#1a1b26"
+  card_bg: "#202335"
+  text_main: "#c0caf5"
+
+stack:
+  - name: "React"
+    label: "REACT"
+  - name: "Next.js"
+    label: "NEXT"
+  - name: "Three.js"
+    label: "THREE"
+  - name: "Tailwind CSS"
+    label: "TAILWIND"
+  - name: "Node.js"
+    label: "NODE"
+  - name: "Python"
+    label: "PYTHON"
+  - name: "PHP"
+    label: "PHP"
+  - name: "PostgreSQL"
+    label: "SQL"
+  - name: "Git"
+    label: "GIT"
+
+projects:
+  - title: "AnsuGPT"
+    image: " "
+    tags: ["PYTHON", "AI"]
+    description: "Tool for hand recognition using webcam AI."
+    link: " "
+    link_text: "[VIEW CODE]"
+  - title: "jar"
+    image: " "
+    tags: ["PYTHON", "DISCORD"]
+    description: "Advanced Discord SelfBot for automation."
+    link: " "
+    link_text: "[VIEW CODE]"
+  - title: "Osint Tools"
+    image: " "
+    tags: ["WEB", "TOOL"]
+    description: "Osint tools that help in gathering information."
+    link: " "
+    link_text: "[VIEW CODE]"
+
+timeline:
+  - year: "2025"
+    event: "Advanced Studies (Three.js, Python, Git)"
+  - year: "2024"
+    event: "React Ecosystem (Next.js, Tailwind)"
+  - year: "2023"
+    event: "Web Fundamentals & Backend (PHP)"
+  - year: "2022"
+    event: "JavaScript Mastery"
+  - year: "2021"
+    event: "Started with Discord Bots"

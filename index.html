@@ -1,0 +1,198 @@
+<!-- 
+Made by Mateo Alexandru
+https://github.com/alex1dev00
+Love you xiant.dev
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex | Creative Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+</head>
+<body>
+    <div class="scanlines"></div>
+    <div class="background-gradient"></div>
+
+    <!-- Hero Section <3 -->
+    <main class="container">
+        <div class="bento-item hero">
+            <div class="hero-content">
+                <h1>Hi, I'm <span class="accent">Developer.</span></h1>
+                <p class="role">Creative Developer & UI Designer.</p>
+                <p class="subtitle">Turning complex ideas into clean code.</p>
+            </div>
+            <div class="hero-actions">
+                <div class="status-badge">
+                    <span class="dot"></span> Available for new projects
+                </div>
+                <button id="viewWorkBtn" class="retro-btn">VIEW WORK</button>
+            </div>
+        </div>
+
+        <!-- Game Section (: -->
+        <div class="bento-item game-container" id="gameContainer">
+            <div class="game-ui">
+                <div class="game-header">
+                    <h2>SNAKE.EXE</h2>
+                    <div class="score-board">SCORE: <span id="score">0</span></div>
+                </div>
+                <div class="game-controls-ui">
+                    <span class="controls-hint">USE ARROW KEYS</span>
+                </div>
+            </div>
+            <div class="canvas-wrapper">
+                <canvas id="gameCanvas"></canvas>
+                <div class="game-overlay" id="gameOverlay">
+                    <div class="overlay-content">
+                        <p class="blink-text">READY?</p>
+                        <button id="startBtn">INSERT COIN</button>
+                    </div>
+                </div>
+                
+                <div class="touch-controls hidden" id="touchControls">
+                    <button class="d-pad-btn up" data-dir="up">▲</button>
+                    <div class="d-pad-row">
+                        <button class="d-pad-btn left" data-dir="left">◀</button>
+                        <button class="d-pad-btn right" data-dir="right">▶</button>
+                    </div>
+                    <button class="d-pad-btn down" data-dir="down">▼</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- STACK, TIME, SOCIAL Section -_- -->
+        <div class="bento-item stack">
+            <h3>TECH STACK</h3>
+            <div class="stack-list">
+                <div class="icon" title="React">REACT</div>
+                <div class="icon" title="Next.js">NEXT</div>
+                <div class="icon" title="Three.js">THREE</div>
+                <div class="icon" title="Tailwind CSS">TAILWIND</div>
+                
+                <div class="icon" title="Node.js">NODE</div>
+                <div class="icon" title="Python">PYTHON</div>
+                <div class="icon" title="PHP">PHP</div>
+                <div class="icon" title="PostgreSQL">SQL</div>
+                <div class="icon" title="Git">GIT</div>
+            </div>
+        </div>
+
+        <div class="bento-item location">
+            <div class="time" id="clock">00:00</div>
+            <div class="place">Italy / Rome</div>
+        </div>
+
+        <a href="https://github.com" target="_blank" class="bento-item social github">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            <span>GitHub</span>
+        </a>
+
+        <div class="bento-item contact" id="copy-email">
+            <div class="contact-content">
+                <h3>Let's work together?</h3>
+                <p class="email-text">example@example.com</p>
+            </div>
+            <span class="copy-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"></path><path d="M16 4h2a2 2 0 0 1 2 2v4"></path><path d="M21 14H11"></path><path d="M15 10l-4 4 4 4"></path></svg>
+            </span>
+        </div>
+        
+    </main>
+
+    <div id="toast">Email copied!</div>
+
+    <!-- Work Section :-D -->
+    <div id="workModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>C:\USER\xiant.dev\WORK</h2>
+                <button id="closeModalBtn" class="close-btn">X</button>
+            </div>
+            <div class="modal-body">
+                
+                <section class="modal-section">
+                    <h3>> BIO_DATA.TXT</h3>
+                    <p class="terminal-text">
+                        17-year-old student from Italy, studying Economics. <br>
+                        Coding in free time. Focused on minimal, functional design and scalable code. <br>
+                    </p>
+                </section>
+
+                <section class="modal-section">
+                    <h3>> PROJECTS.EXE</h3>
+                    <div class="projects-grid">
+                        <!-- work 1 -->
+                        <div class="project-card">
+                            <div class="project-img-wrapper">
+                                <img src="proj1.png" alt="Pinch Polygon">
+                            </div>
+                            <div class="project-details">
+                                <h4>Pinch Polygon</h4>
+                                <span class="tech-tag">PYTHON</span> <span class="tech-tag">AI</span>
+                                <p>Tool for hand recognition using webcam AI.</p>
+                                <a href="https://github.com/alex1dev0/webcam-ai-tool" target="_blank" class="link-btn">[VIEW CODE]</a>
+                            </div>
+                        </div>
+                        <!-- work 2 -->
+                        <div class="project-card">
+                            <div class="project-img-wrapper">
+                                <img src="proj2.png" alt="SukunaPBot">
+                            </div>
+                            <div class="project-details">
+                                <h4>SukunaPBot</h4>
+                                <span class="tech-tag">PYTHON</span> <span class="tech-tag">DISCORD</span>
+                                <p>Advanced Discord SelfBot for automation.</p>
+                                <a href="https://github.com/alex1dev0/alexoneselfbotv1" target="_blank" class="link-btn">[VIEW CODE]</a>
+                            </div>
+                        </div>
+                        <!-- work 3 -->
+                        <div class="project-card">
+                            <div class="project-img-wrapper">
+                                <img src="proj3.png" alt="XenoAI">
+                            </div>
+                            <div class="project-details">
+                                <h4>XenoAI</h4>
+                                <span class="tech-tag">PHP</span> <span class="tech-tag">OLLAMA</span>
+                                <p>AI ChatBot with local LLM integration.</p>
+                                <a href="https://github.com/alex1dev0/xenoai" target="_blank" class="link-btn">[VIEW CODE]</a>
+                            </div>
+                        </div>
+                        <!-- work 4 -->
+                        <div class="project-card">
+                            <div class="project-img-wrapper">
+                                <img src="proj4.png" alt="Readme Creator">
+                            </div>
+                            <div class="project-details">
+                                <h4>Readme Creator</h4>
+                                <span class="tech-tag">WEB</span> <span class="tech-tag">TOOL</span>
+                                <p>Generate beautiful GitHub Readme files.</p>
+                                <a href="https://github.com/alex1dev0/readme-creator" target="_blank" class="link-btn">[VIEW CODE]</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Story Section -->
+                <section class="modal-section">
+                    <h3>> TIMELINE.LOG</h3>
+                    <ul class="timeline-list">
+                        <li><span class="date">2025</span> <span class="event">Advanced Studies (Three.js, Python, Git)</span></li>
+                        <li><span class="date">2024</span> <span class="event">React Ecosystem (Next.js, Tailwind)</span></li>
+                        <li><span class="date">2023</span> <span class="event">Web Fundamentals & Backend (PHP)</span></li>
+                        <li><span class="date">2022</span> <span class="event">JavaScript Mastery</span></li>
+                        <li><span class="date">2021</span> <span class="event">Started with Discord Bots</span></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
